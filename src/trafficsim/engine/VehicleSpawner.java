@@ -33,17 +33,14 @@ import java.util.function.Function;
 public class VehicleSpawner {
 
     private final Random rng;
-    private final double spawnProbability;
+    private double spawnProbability;
 
     private final WeightedRandom<Function<SpawnContext, Vehicle>> vehicleMix;
     private final WeightedRandom<DriverProfile> profileMix;
 
     public VehicleSpawner(Random rng, double spawnProbability) {
         this.rng = Objects.requireNonNull(rng, "Random source cannot be null");
-        if (spawnProbability < 0.0 || spawnProbability > 1.0) {
-            throw new IllegalArgumentException("Spawn probability must be between 0 and 1");
-        }
-        this.spawnProbability = spawnProbability;
+        setSpawnProbability(spawnProbability);
         this.vehicleMix = new WeightedRandom<>(rng);
         this.profileMix = new WeightedRandom<>(rng);
 
@@ -65,6 +62,14 @@ public class VehicleSpawner {
         if (rng.nextDouble() > spawnProbability) return;
         spawnOne(network);
     }
+
+    /** Engine callers hold the network lock when changing this during a run. */
+    public void setSpawnProbability(double probability) {
+        if (!Double.isFinite(probability) || probability < 0.0 || probability > 1.0)
+            throw new IllegalArgumentException("Spawn probability must be finite and between 0 and 1");
+        spawnProbability = probability;
+    }
+    public double getSpawnProbability() { return spawnProbability; }
 
     public boolean spawnOne(RoadNetwork network) {
         Rectangle b = network.getBounds();

@@ -5,6 +5,9 @@ import trafficsim.util.Axis;
 import trafficsim.util.LightPhase;
 import trafficsim.model.light.TrafficLight;
 import trafficsim.model.vehicle.Vehicle;
+import trafficsim.strategy.AdaptiveSignalTiming;
+import trafficsim.strategy.SignalTimingStrategy;
+import java.util.Objects;
 
 /**
  * 4-way stop-and-go intersection controlled by a {@link TrafficLight}, with
@@ -15,6 +18,7 @@ public final class SignalisedIntersection extends Intersection {
 
     private final TrafficLight light;
     private int extensionsThisPhase = 0;
+    private SignalTimingStrategy timingStrategy = new AdaptiveSignalTiming();
 
     public SignalisedIntersection(int x, int y, TrafficLight light) {
         super(x, y);
@@ -32,6 +36,13 @@ public final class SignalisedIntersection extends Intersection {
         return light;
     }
 
+    public SignalTimingStrategy getTimingStrategy() { return timingStrategy; }
+
+    /** Keep phase state and its extension budget when changing policies. */
+    public void setTimingStrategy(SignalTimingStrategy strategy) {
+        timingStrategy = Objects.requireNonNull(strategy, "Timing strategy is required");
+    }
+
     /**
      * If we're near the end of a green phase and there's a busy queue on that
      * axis, reset the timer to buy a few extra ticks. Capped by
@@ -45,12 +56,10 @@ public final class SignalisedIntersection extends Intersection {
         }
         // Green is extended only in its final four ticks, not for the whole phase.
         int remaining = light.getGreenDuration() - light.getTimer();
-        if (remaining > 4) return; // only extend near end of phase
-        if (extensionsThisPhase >= SimConstants.ADAPTIVE_MAX_EXTENSIONS) return;
-        int queued = queuedOnGreenAxis();
-        if (queued < SimConstants.ADAPTIVE_QUEUE_HIGH) return;
+        int extension = timingStrategy.extensionTicks(remaining, queuedOnGreenAxis(), extensionsThisPhase);
+        if (extension <= 0) return;
         // Rewind the timer by the extension length so the state machine sees "still fresh green".
-        light.extendCurrentPhase(SimConstants.ADAPTIVE_EXTEND_TICKS);
+        light.extendCurrentPhase(extension);
         extensionsThisPhase++;
     }
 

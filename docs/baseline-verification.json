@@ -1,0 +1,17 @@
+[
+  {
+    "seed": 1,
+    "ticks": 3000,
+    "sha256_original_and_updated": "35eec99a981022c9d5ae72a90acf61f1ae2e7e6ad90762b286798c5aed9ebc50"
+  },
+  {
+    "seed": 42,
+    "ticks": 3000,
+    "sha256_original_and_updated": "edfc3950fd2251f9e400278ba44bd9bca03b952169fb4a6adfc04817c3b59354"
+  },
+  {
+    "seed": 48977152,
+    "ticks": 3000,
+    "sha256_original_and_updated": "899cfd7a94cebedcf06fed6e5ce7d0acbc2229edbbfc6792bf76a888734559dd"
+  }
+]

@@ -1,0 +1,245 @@
+{
+  "source_archive": "COMP2000---Object-Oriented-Programming-main.zip",
+  "source_archive_sha256": "61d427ee7e97b8e201d0b7d707ffb047a9e94730d51ff1c186558c7e1868a50c",
+  "original_files": [
+    {
+      "path": ".gitignore",
+      "original_sha256": "9482637c521153ab54105197f18226b7d557c064e6e9480ebb3ccd5af49535b5",
+      "updated_sha256": "3a52b296d8a0f94822c8bd849aa4ad5b2bc478aa38d3c6dafcf3d3f47a8730d6",
+      "status": "modified"
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "41e4e8444e0a47c5cafb353f1445b86192af3b883b15754db3367cbddce49040",
+      "updated_sha256": "f4b79ac6b30893c53c2c52d029258c6d5eaec600b486e7697ea321082b2410fd",
+      "status": "modified"
+    },
+    {
+      "path": "networks/grid.txt",
+      "original_sha256": "4278e2546d53b2d03a4e0990fff12c258180f2c0b8fb4965d8bebcc1784718b9",
+      "updated_sha256": "4278e2546d53b2d03a4e0990fff12c258180f2c0b8fb4965d8bebcc1784718b9",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/Main.java",
+      "original_sha256": "4eb6a7661a4873e9f31176844642fd57b7271fc499e24e90574bc83dc57d6aed",
+      "updated_sha256": "ed7f42303c570130903496d5ce41c8d036a67833d3ff0b222b21411b8bff282b",
+      "status": "modified"
+    },
+    {
+      "path": "src/trafficsim/SimConstants.java",
+      "original_sha256": "e676b7d88fc4d4666c0f4d2430ca791f977968b1dde5c7067e838759707c2d08",
+      "updated_sha256": "e676b7d88fc4d4666c0f4d2430ca791f977968b1dde5c7067e838759707c2d08",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/engine/SensorReading.java",
+      "original_sha256": "f215578762004f3047d4f41662e25eb7c201f905a7f74c817b236b2ccb9db4fe",
+      "updated_sha256": "f215578762004f3047d4f41662e25eb7c201f905a7f74c817b236b2ccb9db4fe",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/engine/SimulationEngine.java",
+      "original_sha256": "3e83b24455ccd5df9afcfe19fe63b8bb8d27c5ee9b11511d036143894b9aceff",
+      "updated_sha256": "35832c8194e179b48273968d0f437554a1f5d5a5495fbc20d4af02be0908eecd",
+      "status": "modified"
+    },
+    {
+      "path": "src/trafficsim/engine/SimulationObserver.java",
+      "original_sha256": "a79b8df4f31ad9c8d4f65f2a9fc462633c27facf25a0480465b0a0a95ffce0a3",
+      "updated_sha256": "a79b8df4f31ad9c8d4f65f2a9fc462633c27facf25a0480465b0a0a95ffce0a3",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/engine/Statistics.java",
+      "original_sha256": "7ce7e583454c348fbc87c1d94121e598575c0be63019abec62d5189b718d57f8",
+      "updated_sha256": "a3d57a248b4d55b696ff6454d992236825bbc0711fe1bc994a9c2dd5818ad65c",
+      "status": "modified"
+    },
+    {
+      "path": "src/trafficsim/engine/TrafficSensor.java",
+      "original_sha256": "af9e0873a91a3e0e4964f438af9c749fbd914cf7e0af1f8529d949d90f8aa4e6",
+      "updated_sha256": "af9e0873a91a3e0e4964f438af9c749fbd914cf7e0af1f8529d949d90f8aa4e6",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/engine/VehicleSpawner.java",
+      "original_sha256": "3c2c9712c3e873f28ca40141339744dbd1d2ef930fa0800b490ce7228872cf41",
+      "updated_sha256": "a08d63e9820038780e430ff8964ba36fd552f7ba51f23ebe2e722edfca95b443",
+      "status": "modified"
+    },
+    {
+      "path": "src/trafficsim/exception/InvalidNetworkException.java",
+      "original_sha256": "caf58c982338b071489be80a13871235c11ffec71523df8e1b76b7bfaaff5012",
+      "updated_sha256": "caf58c982338b071489be80a13871235c11ffec71523df8e1b76b7bfaaff5012",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/exception/SimulationException.java",
+      "original_sha256": "918607a7286fab749b1053aa42854a459a055d432e950e76933a0e50b046f879",
+      "updated_sha256": "918607a7286fab749b1053aa42854a459a055d432e950e76933a0e50b046f879",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/factory/NetworkLoader.java",
+      "original_sha256": "1a429af2eb6dd43796a92f1b5c4b4229974ec09b85b1b3aca65cd13f05302170",
+      "updated_sha256": "1a429af2eb6dd43796a92f1b5c4b4229974ec09b85b1b3aca65cd13f05302170",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/light/GreenState.java",
+      "original_sha256": "84a99483cb3a0584872f5e7b80a046943d09a6e044ae3646447fedef8779ec22",
+      "updated_sha256": "84a99483cb3a0584872f5e7b80a046943d09a6e044ae3646447fedef8779ec22",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/light/LightState.java",
+      "original_sha256": "bce05d54d03b383a1a1d3ce1d0b0d56f88fc95ce9cce293addec9e6dd486051f",
+      "updated_sha256": "bce05d54d03b383a1a1d3ce1d0b0d56f88fc95ce9cce293addec9e6dd486051f",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/light/RedState.java",
+      "original_sha256": "a2081304863a3c9bc4ef703cdb2a71e3edc836509c339fcb6e00cbab2ca5f53c",
+      "updated_sha256": "a2081304863a3c9bc4ef703cdb2a71e3edc836509c339fcb6e00cbab2ca5f53c",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/light/TrafficLight.java",
+      "original_sha256": "b537bee5ac04db5c8ef72e466700a948db1e161873b5d0226082f464d637bbf6",
+      "updated_sha256": "b537bee5ac04db5c8ef72e466700a948db1e161873b5d0226082f464d637bbf6",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/light/YellowState.java",
+      "original_sha256": "c6af40ef378c19b0201d9a4c9f97a93dd10262d1b7072dea91625dddabb27157",
+      "updated_sha256": "c6af40ef378c19b0201d9a4c9f97a93dd10262d1b7072dea91625dddabb27157",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/BusStop.java",
+      "original_sha256": "8429cb186dc524163fb27b91706bfa0d2ae34cfff8a60045cff92e6946284312",
+      "updated_sha256": "8429cb186dc524163fb27b91706bfa0d2ae34cfff8a60045cff92e6946284312",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/Intersection.java",
+      "original_sha256": "60fac940f8ebb5feabda75e5915ec6854dc0bd0552810f6f019e3b8677ef677d",
+      "updated_sha256": "60fac940f8ebb5feabda75e5915ec6854dc0bd0552810f6f019e3b8677ef677d",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/Lane.java",
+      "original_sha256": "3b09bdb174cc4f516e8cdd9c0af6b0a3b73e551a72bad3e3f7ef0e9e141701d7",
+      "updated_sha256": "3b09bdb174cc4f516e8cdd9c0af6b0a3b73e551a72bad3e3f7ef0e9e141701d7",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/Road.java",
+      "original_sha256": "8bc9f7fa23ae31ba0301c859a9d343df20310befe21067c69c2f289662b44f27",
+      "updated_sha256": "8bc9f7fa23ae31ba0301c859a9d343df20310befe21067c69c2f289662b44f27",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/RoadNetwork.java",
+      "original_sha256": "62e6bb186375ec010fa01d82ba7d674ea95696acc0965729393711777c923c56",
+      "updated_sha256": "62e6bb186375ec010fa01d82ba7d674ea95696acc0965729393711777c923c56",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/road/SignalisedIntersection.java",
+      "original_sha256": "75dea71487d6db4756c1f99e4523c8018fc7794ac3019875f67de5bfc5ceb868",
+      "updated_sha256": "1538fec63a30432922ba025c3cc257e577f394550535fd567ef209b7476787ee",
+      "status": "modified"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/Bus.java",
+      "original_sha256": "4587a19a5357b017eb7842e466b5015e0c963a92538ad0fcbb7085f4f136e325",
+      "updated_sha256": "4587a19a5357b017eb7842e466b5015e0c963a92538ad0fcbb7085f4f136e325",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/Car.java",
+      "original_sha256": "76b20ff35bded50d6d448ca364db00fd1b47ef77ba547d21690ee5487c8d9d0a",
+      "updated_sha256": "76b20ff35bded50d6d448ca364db00fd1b47ef77ba547d21690ee5487c8d9d0a",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/DriverProfile.java",
+      "original_sha256": "016ecf932db58c8d27d88a07e7cb5af08e954c72900b536965e46d72b600516e",
+      "updated_sha256": "016ecf932db58c8d27d88a07e7cb5af08e954c72900b536965e46d72b600516e",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/EmergencyVehicle.java",
+      "original_sha256": "d9d0dff35d1cfeb0a5e27ee4cfa3cd3c39d06befde87e5b33ddef239245b460a",
+      "updated_sha256": "d9d0dff35d1cfeb0a5e27ee4cfa3cd3c39d06befde87e5b33ddef239245b460a",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/Truck.java",
+      "original_sha256": "fee4f31d235bfe841f335554ff1daac24d91ebbf18e99a28113ae6ddf363c187",
+      "updated_sha256": "fee4f31d235bfe841f335554ff1daac24d91ebbf18e99a28113ae6ddf363c187",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/model/vehicle/Vehicle.java",
+      "original_sha256": "622154102339cfc910afdf345adc0fc77f2969beef6afe5e9d61fe944d3b05df",
+      "updated_sha256": "622154102339cfc910afdf345adc0fc77f2969beef6afe5e9d61fe944d3b05df",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/strategy/WeightedRandom.java",
+      "original_sha256": "31bb1e2977bb63d487405d6b1518d899137f15403f5b496a3196946e816d5559",
+      "updated_sha256": "31bb1e2977bb63d487405d6b1518d899137f15403f5b496a3196946e816d5559",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/util/Axis.java",
+      "original_sha256": "56ce6dc1409af85c2c0a69925c109f3d838ee57215d0888e058263d5d39f079d",
+      "updated_sha256": "56ce6dc1409af85c2c0a69925c109f3d838ee57215d0888e058263d5d39f079d",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/util/Direction.java",
+      "original_sha256": "58c8d07b4aa20de11ea4e328c1f2801e60864348d5127f774aa09a9c0f2e1517",
+      "updated_sha256": "58c8d07b4aa20de11ea4e328c1f2801e60864348d5127f774aa09a9c0f2e1517",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/util/LightPhase.java",
+      "original_sha256": "e8f3fbf7ddf212118e5fb2b6ccf9a191c6aafad1840537c5f70035e353a0b542",
+      "updated_sha256": "e8f3fbf7ddf212118e5fb2b6ccf9a191c6aafad1840537c5f70035e353a0b542",
+      "status": "unchanged"
+    },
+    {
+      "path": "src/trafficsim/view/SimulationDisplay.java",
+      "original_sha256": "14ffbb7362174c3f0859cdeaf3a50418649af287dabfd650725a39c2fa2a5aa6",
+      "updated_sha256": "d4af59a11b4d402340c4f6f8786b29b839f1fd8f51e0cabc189e17d4bcbbf3f5",
+      "status": "modified"
+    },
+    {
+      "path": "team contract",
+      "original_sha256": "6f501341154f70df1ccc3420267669546b04a96ff2f5de08dff1a4bc588fa3f8",
+      "updated_sha256": "6f501341154f70df1ccc3420267669546b04a96ff2f5de08dff1a4bc588fa3f8",
+      "status": "unchanged"
+    },
+    {
+      "path": "trafficsimulationuml.drawio",
+      "original_sha256": "0f49f1d28d8c12c5c74115c4539fcf1d944012b15f792372d52e2aa6df1ee08e",
+      "updated_sha256": "0f49f1d28d8c12c5c74115c4539fcf1d944012b15f792372d52e2aa6df1ee08e",
+      "status": "unchanged"
+    }
+  ],
+  "new_java_files": [
+    "src/trafficsim/ComparisonRunner.java",
+    "src/trafficsim/engine/CsvExporter.java",
+    "src/trafficsim/engine/MetricsRecorder.java",
+    "src/trafficsim/engine/SimulationMetrics.java",
+    "src/trafficsim/engine/VehicleMetric.java",
+    "src/trafficsim/strategy/AdaptiveSignalTiming.java",
+    "src/trafficsim/strategy/FixedSignalTiming.java",
+    "src/trafficsim/strategy/SignalTimingStrategy.java",
+    "src/trafficsim/view/SimulationControls.java"
+  ]
+}

@@ -19,3 +19,9 @@ src/out/
 
 # Build output
 *.jar
+
+# Week 13 local build products
+build/
+dist/
+traffic-statistics.csv
+!docs/preview.png

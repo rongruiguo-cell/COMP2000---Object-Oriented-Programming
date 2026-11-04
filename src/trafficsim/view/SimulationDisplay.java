@@ -2,7 +2,7 @@ package trafficsim.view;
 
 import trafficsim.engine.SimulationEngine;
 import trafficsim.engine.SimulationObserver;
-import trafficsim.engine.Statistics;
+import trafficsim.engine.SimulationMetrics;
 import trafficsim.model.road.BusStop;
 import trafficsim.model.road.Intersection;
 import trafficsim.model.road.Lane;
@@ -264,24 +264,27 @@ public final class SimulationDisplay extends JPanel implements SimulationObserve
 
     private void drawDashboard(Graphics2D graphics, List<Vehicle> vehicles) {
         graphics.setColor(new Color(12, 18, 23, 215));
-        graphics.fillRoundRect(18, 16, 324, 92, 14, 14);
+        graphics.fillRoundRect(18, 16, 410, 88, 14, 14);
         graphics.setColor(Color.WHITE);
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
-        graphics.drawString("CITY FLOW", 32, 40);
+        graphics.drawString("CITY FLOW", 32, 36);
         graphics.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
         String state = engine.isPaused() ? "PAUSED" : "RUNNING";
+        SimulationMetrics metrics = engine.getMetrics();
         graphics.drawString(String.format("%s  tick %,d  vehicles %d", state,
-                engine.getTickCount(), vehicles.size()), 32, 59);
+                engine.getTickCount(), vehicles.size()), 32, 52);
         graphics.drawString(String.format("avg speed %.2f  stopped %d",
-                Statistics.averageSpeed(vehicles), Statistics.stoppedCount(vehicles)), 32, 76);
+                metrics.statistics().averageSpeed(), metrics.statistics().stopped()), 32, 66);
         graphics.drawString(String.format("run seed %016X",
-                engine.getRunSeed()), 32, 94);
+                engine.getRunSeed()), 32, 80);
+        graphics.drawString(String.format("%s signals  completed %d  max speed %.2f",
+                metrics.timing(), metrics.completed(), metrics.statistics().maximumSpeed()), 32, 96);
 
         graphics.setColor(new Color(12, 18, 23, 185));
-        graphics.fillRoundRect(18, getHeight() - 45, 170, 28, 12, 12);
+        graphics.fillRoundRect(18, getHeight() - 45, 365, 28, 12, 12);
         graphics.setColor(new Color(225, 232, 235));
         graphics.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
-        graphics.drawString("SPACE pause/resume", 31, getHeight() - 26);
+        graphics.drawString("SPACE pause/resume | N single step | speed: units/tick", 31, getHeight() - 26);
 
     }
 
@@ -289,6 +292,10 @@ public final class SimulationDisplay extends JPanel implements SimulationObserve
         InputMap inputMap = getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
         ActionMap actionMap = getActionMap();
         inputMap.put(KeyStroke.getKeyStroke("SPACE"), "toggle-running");
+        inputMap.put(KeyStroke.getKeyStroke("N"), "single-step");
+        actionMap.put("single-step", new AbstractAction() {
+            @Override public void actionPerformed(ActionEvent event) { engine.stepOnce(); repaint(); }
+        });
         actionMap.put("toggle-running", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent event) {
